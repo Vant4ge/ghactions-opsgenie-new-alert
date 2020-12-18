@@ -1,0 +1,18 @@
+name: 'OpsGenie Alert Creation Step'
+description: 'Create an alert in OpsGenie'
+branding:
+  icon: 'alert-circle'  
+  color: 'green'
+inputs:
+  api-key:
+    description: 'OpsGenie API Key'
+    required: true
+  priority:
+    description: 'OpsGenie Priority P1-P5 must be upper cased'
+    required: true
+  subject:
+    description: 'alert subject to send to OpsGenie'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

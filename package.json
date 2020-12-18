@@ -1,0 +1,24 @@
+{
+  "name": "ghactions-opsgenie-new-alert",
+  "version": "0.0.1",
+  "description": "GitHub Action to create alerts in Atlassian Opsgenie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vant4ge/ghactions-opsgenie-new-alert.git"
+  },
+  "author": "Vant4ge Engineering <dev@vant4ge.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Vant4ge/ghactions-opsgenie-new-alert/issues"
+  },
+  "homepage": "https://github.com/Vant4ge/ghactions-opsgenie-new-alert#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "opsgenie-sdk": "^0.4.3"
+  }
+}

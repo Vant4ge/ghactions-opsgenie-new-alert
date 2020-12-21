@@ -28,8 +28,8 @@ try
         'alias': alias,
         'priority': priority,
         'description': body,
-        "details": details,
-        "tags": tags
+        'details': details,
+        'tags': tags
     };
 
     opsGenie.alertV2.create(create_alert_json, function (error, alert) {

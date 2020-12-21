@@ -2,7 +2,7 @@
 
 OpsGenie action to use the current OpsGenie API to create alerts using the OpsGenie NodeJS SDK
 
-## Parameters
+## Inputs
 
 These are the supported parameters from the OpsGenie SDK that are currently implemented. 
 
@@ -21,7 +21,7 @@ These are experimental and not really tested yet
 * details - Map of key/value pairs to send for more information
 * tags - Array of tags for the alert (max 20 items 50 chars)
 
-## Example
+## Example usage
 
 `
 - name: Send notification to OpsGenie on job failure
@@ -34,3 +34,9 @@ These are experimental and not really tested yet
     subject: "Failure occurred processing ${{ github.action }} in job ${{ github.job }}."
     body: "Failure occurred processing ${{ github.action }} in job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/runs/${{ github.run_id }}"
 `
+
+## Compile for use by GitHub Actions
+
+1. Install ncc: npm i -g @vercel/ncc
+2. Compile: ncc build index.js --license licenses.txt
+3. Make sure you are committing the Dist folder

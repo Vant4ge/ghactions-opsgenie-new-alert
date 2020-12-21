@@ -12,7 +12,7 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
 * priority - Priority for the alert must be a valid OpsGenie Priority (P1-P5 currently and must be uppercase)
 * alias - Unique ID for the alert to prevent duplicate alerts. I suggest using the GitHub Project ID with the Action Run ID. (max 512 chars)
 * subject - Alert subject to send to OpsGenie (max 130 chars)
-* body - Alert body to send to OpsGenie (max 15K chars)
+* body - Alert description to send to OpsGenie (max 15K chars)
 
 ## Example usage
 

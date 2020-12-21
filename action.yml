@@ -15,7 +15,7 @@ inputs:
     description: 'Alert subject to send to OpsGenie (max 130 chars)'
     required: true
   body:
-    description: 'Alert body to send to OpsGenie (max 15K chars)'
+    description: 'Alert description to send to OpsGenie (max 15K chars)'
     required: true
 
 runs:

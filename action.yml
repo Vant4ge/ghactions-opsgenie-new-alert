@@ -1,0 +1,30 @@
+name: 'OpsGenie Alert Creation Step'
+description: 'Create an alert in OpsGenie'
+branding:
+  icon: 'alert-circle'  
+  color: 'green'
+inputs:
+  api-key:
+    description: 'OpsGenie API Key'
+    required: true
+  priority:
+    description: 'OpsGenie Priority P1-P5 must be uppercase'
+    required: true
+  alias:
+    description: 'Unique ID for the alert to prevent duplicate alerts. I suggest using the GitHub SHA combined with the Run ID. (max 512 chars)'
+    required: true
+  subject:
+    description: 'Alert subject to send to OpsGenie (max 130 chars)'
+    required: true
+  body:
+    description: 'Alert body to send to OpsGenie (max 15K chars)'
+    required: true
+  details:
+    description: 'Map of key/value pairs to send for more information'
+    required: false
+  tags:
+    description: 'Array of tags for the alert (max 20 items 50 chars)'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

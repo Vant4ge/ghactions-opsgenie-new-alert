@@ -209,10 +209,7 @@ const opsGenie = __webpack_require__(3799);
 
 try 
 {
-    const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`);
-
-    const api_key = core.getInput('api-key');
+    const apiKey = core.getInput('apikey');
     const subject = core.getInput('subject');
     const alias = core.getInput('alias');
     const priority = core.getInput('priority');
@@ -220,7 +217,7 @@ try
     
     // Configure OpsGenie SDK
     opsGenie.configure({
-        'api_key': api_key
+        'api_key': apiKey
     });
 
     // Create OpsGenie alert

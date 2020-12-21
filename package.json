@@ -1,6 +1,6 @@
 {
   "name": "ghactions-opsgenie-new-alert",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "GitHub Action to create alerts in Atlassian OpsGenie",
   "main": "index.js",
   "scripts": {

@@ -20,3 +20,17 @@ These are experimental and not really tested yet
 
 * details - Map of key/value pairs to send for more information
 * tags - Array of tags for the alert (max 20 items 50 chars)
+
+## Example
+
+`
+- name: Send notification to OpsGenie on job failure
+  if: ${{ failure() }}
+  uses: Vant4ge/ghactions-opsgenie-new-alert@v0.0.2
+  with:
+    apikey: ${{ secrets.OPSGENIE_API_KEY }}
+    alias: ${{ github.repository }}_${{ github.job }}_${{ github.run_id }}
+    priority: P3
+    subject: "Failure occurred processing ${{ github.action }} in job ${{ github.job }}."
+    body: "Failure occurred processing ${{ github.action }} in job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/runs/${{ github.run_id }}"
+`

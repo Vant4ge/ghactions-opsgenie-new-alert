@@ -13,7 +13,7 @@ try
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);
 
-    const api_key = core.getInput('api-key');
+    const api_key = core.getInput('apikey');
     const subject = core.getInput('subject');
     const alias = core.getInput('alias');
     const priority = core.getInput('priority');

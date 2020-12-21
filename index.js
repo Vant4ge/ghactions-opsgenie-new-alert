@@ -39,7 +39,6 @@ try
             console.log(alert);
         }
     });
-
 } catch (error) {
     core.setFailed(error.message);
 }

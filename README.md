@@ -14,13 +14,6 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
 * subject - Alert subject to send to OpsGenie (max 130 chars)
 * body - Alert body to send to OpsGenie (max 15K chars)
 
-### Optional 
-
-These are experimental and not really tested yet
-
-* details - Map of key/value pairs to send for more information
-* tags - Array of tags for the alert (max 20 items 50 chars)
-
 ## Example usage
 
 `

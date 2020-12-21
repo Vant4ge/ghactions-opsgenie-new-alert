@@ -1,10 +1,6 @@
 name: 'OpsGenie Alert Creation Step'
 description: 'Create an alert in OpsGenie'
 
-branding:
-  icon: 'alert-circle'  
-  color: 'green'
-
 inputs:
   apikey:
     description: 'OpsGenie API Key'
@@ -21,12 +17,6 @@ inputs:
   body:
     description: 'Alert body to send to OpsGenie (max 15K chars)'
     required: true
-  details:
-    description: 'Map of key/value pairs to send for more information'
-    required: false
-  tags:
-    description: 'Array of tags for the alert (max 20 items 50 chars)'
-    required: false
 
 runs:
   using: 'node12'

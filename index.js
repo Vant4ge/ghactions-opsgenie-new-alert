@@ -18,8 +18,6 @@ try
     const alias = core.getInput('alias');
     const priority = core.getInput('priority');
     const body = core.getInput('body');
-    const details = core.getInput('details') ?? {};
-    const tags = core.getInput('tags') ?? [];
     
     // Configure OpsGenie SDK
     opsGenie.configure({
@@ -31,9 +29,7 @@ try
         'message': subject,
         'alias': alias,
         'priority': priority,
-        'description': body,
-        'details': details,
-        'tags': tags
+        'description': body
     };
 
     opsGenie.alertV2.create(create_alert_json, function (error, alert) {

@@ -19,13 +19,13 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
 `
 - name: Send notification to OpsGenie on job failure
   if: ${{ failure() }}
-  uses: Vant4ge/ghactions-opsgenie-new-alert@v0.0.2
+  uses: Vant4ge/ghactions-opsgenie-new-alert@v0.0.7
   with:
     apikey: ${{ secrets.OPSGENIE_API_KEY }}
     alias: ${{ github.repository }}_${{ github.job }}_${{ github.run_id }}
     priority: P3
-    subject: "Failure occurred processing ${{ github.action }} in job ${{ github.job }}."
-    body: "Failure occurred processing ${{ github.action }} in job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/runs/${{ github.run_id }}"
+    subject: "GitHub Action Failed - ${{ github.repository }} in job ${{ github.job }}."
+    body: "Failure occurred processing job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/runs/${{ github.run_id }}"
 `
 
 ## Compile for use by GitHub Actions

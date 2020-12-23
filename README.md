@@ -16,7 +16,7 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
 
 ## Example usage
 
-`
+```
 - name: Send notification to OpsGenie on job failure
   if: ${{ failure() }}
   uses: Vant4ge/ghactions-opsgenie-new-alert@v0.0.7
@@ -26,7 +26,7 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
     priority: P3
     subject: "GitHub Action Failed - ${{ github.repository }} in job ${{ github.job }}."
     body: "Failure occurred processing job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-`
+```
 
 ## Compile for use by GitHub Actions
 

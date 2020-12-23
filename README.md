@@ -25,7 +25,7 @@ These are the supported parameters from the OpsGenie SDK that are currently impl
     alias: ${{ github.repository }}_${{ github.job }}_${{ github.run_id }}
     priority: P3
     subject: "GitHub Action Failed - ${{ github.repository }} in job ${{ github.job }}."
-    body: "Failure occurred processing job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/runs/${{ github.run_id }}"
+    body: "Failure occurred processing job ${{ github.job }} in repo ${{ github.repository }}. Link to job execution: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 `
 
 ## Compile for use by GitHub Actions
